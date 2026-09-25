@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode Session Header",
+    "description": "Attaches a stable per-conversation x-opencode-session header to OpenCode / OpenCode Go provider requests — fixes 400 MissingSessionID and keeps session affinity / prompt-cache routing working."
+  }
+}

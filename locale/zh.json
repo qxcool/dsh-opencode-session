@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode 会话头",
+    "description": "为 OpenCode / OpenCode Go 提供商请求附加稳定的 per-conversation 会话头，修复 400 MissingSessionID，保持会话亲和与提示缓存路由。"
+  }
+}
