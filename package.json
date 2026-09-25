@@ -39,11 +39,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nobu121/dsh-opencode-session.git"
+    "url": "https://github.com/qxcool/dsh-opencode-session.git"
   },
-  "homepage": "https://github.com/nobu121/dsh-opencode-session",
+  "homepage": "https://github.com/qxcool/dsh-opencode-session",
   "bugs": {
-    "url": "https://github.com/nobu121/dsh-opencode-session/issues"
+    "url": "https://github.com/qxcool/dsh-opencode-session/issues"
   },
   "dsh": {
     "bundle": {
