@@ -5,7 +5,10 @@
 #
 # Configuration (row `config`, all optional):
 #   providers: [string]  provider route keys to attach the header to.
-#                        Defaults to the pi-ai catalog ids ['opencode', 'opencode-go'].
+#                        Defaults to the four route keys the wire-protocol
+#                        split serves OpenCode(Go) under: ['opencode',
+#                        'opencode-go', 'opencode-go-responses',
+#                        'opencode-go-anthropic'].
 #                        Add your own route key when the OpenCode endpoint is
 #                        served under a custom provider name.
 #   mode: 'session-id' | 'uuid'   header value derivation.
@@ -25,5 +28,7 @@
         providers:
           - opencode
           - opencode-go
+          - opencode-go-responses
+          - opencode-go-anthropic
         mode: session-id
         debug: false

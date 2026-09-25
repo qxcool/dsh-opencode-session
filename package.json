@@ -1,6 +1,6 @@
 {
   "name": "dsh-opencode-session",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DeepSeek Harness plugin: automatically adds a stable per-conversation x-opencode-session header to OpenCode / OpenCode Go provider requests — fixes 400 MissingSessionID and keeps OpenCode's session affinity / prompt-cache routing working.",
   "type": "module",
   "main": "lib/index.js",

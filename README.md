@@ -43,7 +43,7 @@ Then **fully restart** your dsh profile (bundle layers are read at startup).
 The startup log shows:
 
 ```
-[opencode-go-session-header] active for providers [opencode, opencode-go] with mode session-id
+[opencode-go-session-header] active for providers [opencode, opencode-go, opencode-go-responses, opencode-go-anthropic] with mode session-id
 ```
 
 If you run DSH from a source checkout instead, load it as an overlay:
@@ -58,15 +58,17 @@ The plugin row lives in the bundle's `cordis.patch.yml`; all keys are optional:
     - id: opencode-go-session-header
       name: dsh-opencode-session
       config:
-        providers: [opencode, opencode-go]   # route keys to attach the header to
+        providers: [opencode, opencode-go, opencode-go-responses, opencode-go-anthropic]   # route keys to attach the header to
         mode: session-id                     # 'session-id' | 'uuid'
         debug: false
         debugFile: null                      # optional absolute path
 ```
 
 - `providers` — provider route keys whose requests get the header. The
-  defaults cover the pi-ai catalog ids `opencode` and `opencode-go`; add your
-  own route key when you serve OpenCode through a custom provider name.
+  defaults cover the four route keys the wire-protocol split serves OpenCode
+  under (`opencode`, `opencode-go`, `opencode-go-responses`,
+  `opencode-go-anthropic`); add your own route key when you serve OpenCode
+  through a custom provider name.
 - `mode`
   - `session-id` (default) — header value = the DSH session id of the model
     call. Unique per conversation, stable across turns, compaction, retries
